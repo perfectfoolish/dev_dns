@@ -1,0 +1,3 @@
+现在如果hostname是 test.fli, /etc/hostname 中 只会 被设置成 test， 在／etc／hosts中 会有 127.0.0.1 test.fli test
+
+需要想办法解决
