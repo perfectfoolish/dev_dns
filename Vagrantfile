@@ -5,9 +5,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
 
   config.vm.define "user" do |u|
-    u.vm.box = "ubuntu/trusty64"
     u.vm.network "private_network", ip: "192.168.50.5"
 
     config.vm.provider "virtualbox" do |v|
@@ -17,7 +17,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "proxy" do |p|
-    p.vm.box = "ubuntu/trusty64"
     p.vm.network "private_network", ip: "192.168.50.6"
 
     config.vm.provider "virtualbox" do |v|
@@ -27,7 +26,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "dns1" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.60.8"
 
     config.vm.provider "virtualbox" do |v|
@@ -37,7 +35,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "dns2" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.70.8"
 
     config.vm.provider "virtualbox" do |v|
@@ -47,7 +44,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "d1web" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.60.5"
 
     config.vm.provider "virtualbox" do |v|
@@ -57,7 +53,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "d1db" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.60.7"
 
     config.vm.provider "virtualbox" do |v|
@@ -67,7 +62,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "d2web" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.70.5"
 
     config.vm.provider "virtualbox" do |v|
@@ -77,7 +71,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "d2db" do |d|
-    d.vm.box = "ubuntu/trusty64"
     d.vm.network "private_network", ip: "192.168.70.7"
 
     config.vm.provider "virtualbox" do |v|
